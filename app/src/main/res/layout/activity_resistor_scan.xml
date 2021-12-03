@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
 
-    <org.opencv.android.JavaCamera2View
+    <com.example.resistorvision.JavaCamera2ViewPlus
         android:id="@+id/resistor_scan_camera_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -16,10 +16,9 @@
         android:layout_marginBottom="50dp"
         android:visibility="visible"
         app:camera_id="back"
-        app:show_fps="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:show_fps="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>

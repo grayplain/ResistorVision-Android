@@ -3,9 +3,7 @@ package com.example.resistorvision
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import org.opencv.android.OpenCVLoader
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,9 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val hoge = findViewById<Button>(R.id.main_goto_camera)
-        hoge.setOnClickListener{
+        val gotoCamera = findViewById<Button>(R.id.main_goto_camera)
+        gotoCamera.setOnClickListener{
             val intent = Intent(applicationContext, ResistorScanActivity::class.java)
+            startActivity(intent)
+        }
+
+        val gotoIntro = findViewById<Button>(R.id.main_goto_introduce)
+        gotoIntro.setOnClickListener{
+            val intent = Intent(applicationContext, IntroduceActivity::class.java)
             startActivity(intent)
         }
     }
